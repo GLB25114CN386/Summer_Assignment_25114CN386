@@ -1,6 +1,6 @@
 package Day8;
 import java.util.*;
-public class Q29 {
+public class Q32 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -10,7 +10,7 @@ public class Q29 {
         {
             for(int j=1;j<=i;j++)
             {
-                System.out.print("*");
+                System.out.print(i);
             }
                 System.out.println(" ");
         }
