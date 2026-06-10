@@ -1,6 +1,6 @@
 package Day10;
 import java.util.*;
-public class Q37 {
+public class Q40 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -8,15 +8,19 @@ public class Q37 {
         int n=sc.nextInt();
         for(int i=1;i<=n;i++)
         {
-            //Print Spaces
             for(int j=1;j<=n-i;j++)
             {
                 System.out.print(" ");
             }
-            //Print Stars
-            for(int k=1;k<=(2*i-1);k++)
+            //Ascending Numbers
+            for(int j=1;j<=i;j++)
             {
-                System.out.print("*");
+                System.out.print((char)(64+j));
+            }
+            //Descending Numbers
+            for(int j=i-1;j>=1;j--)
+            {
+                System.out.print((char)(64+j));
             }
             System.out.println();
         }
