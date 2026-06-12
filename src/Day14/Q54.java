@@ -1,6 +1,6 @@
 package Day14;
 import java.util.*;
-public class Q53 {
+public class Q54 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -12,18 +12,14 @@ public class Q53 {
         {
             a[i]=sc.nextInt();
         }
-        System.out.println("Enter the element to be searched");
+        System.out.println("Enter the element to count its frequency");
         int num=sc.nextInt();
-        int k=0,pos=0;
+        int count=0;
         for(int j=0;j<n;j++)
         {
             if(a[j]==num)
-            { k=1;
-            pos=j+1;}
+            count++;
         }
-        if(k==1)
-            System.out.println("Element present in the array at "+pos);
-        else
-            System.out.println("Element not present in the array");
+            System.out.println("Frequency of the Entered Element in the array is "+count);
     }
 }
