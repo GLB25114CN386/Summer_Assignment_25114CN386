@@ -1,6 +1,6 @@
 package Day13;
 import java.util.*;
-public class Q49 {
+public class Q52 {
     public static void main(String args[])
     {
         int n;
@@ -13,10 +13,15 @@ public class Q49 {
         {
             a[i]=sc.nextInt();
         }
-        System.out.println("The Entered elements are:");
+        int ecount=0,ocount=0;
         for(int i=0;i<n;i++)
         {
-            System.out.println(a[i]);
+            if(a[i]%2==0)
+                ecount++;
+            if(a[i]%2!=0)
+                ocount++;
         }
+        System.out.println("The number of even elements are "+ecount);
+        System.out.println("The number of odd elements are "+ocount);
     }
 }
