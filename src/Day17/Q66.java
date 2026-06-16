@@ -1,6 +1,6 @@
 package Day17;
 import java.util.*;
-public class Q65 {
+public class Q66 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -20,19 +20,34 @@ public class Q65 {
         {
             a[i]=sc.nextInt();
         }
-        int ar[]=new int[n+m];
-        for(int j=0;j<n;j++)
+        int narr[]=new int[n+m];
+        int size=0;
+        for(int i=0;i<n;i++)
         {
-            ar[j]=arr[j];
+            narr[size]=arr[i];
+            size++;
         }
         for(int i=0;i<m;i++)
         {
-            ar[n+i]=a[i];
-        }
-        System.out.println("The Merged Array:");
-            for(int i=0;i<(n+m);i++)
+            int flag=0;
+            for(int j=0;j<size;j++)
             {
-                System.out.println(ar[i]);
+                if(a[i]==narr[j])
+                {
+                    flag=1;
+                    break;
+                }
             }
+            if(flag==0)
+            {
+                narr[size]=a[i];
+                size++;
+            }
+        }
+        System.out.println("The Union of both the arrays");
+        for(int i=0;i<size;i++)
+        {
+            System.out.println(narr[i]);
+        }
     }
 }
