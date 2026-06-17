@@ -1,6 +1,6 @@
 package Day18;
 import java.util.*;
-public class Q69 {
+public class Q70 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -12,21 +12,22 @@ public class Q69 {
         {
             arr[i]=sc.nextInt();
         }
-        int temp=0;
-        //Bubble Sorting
-        for(int i=0;i<n-1;i++)
+        int min=0,temp=0;
+        //Selection Sorting
+        for(int i=0;i<n;i++)
         {
-            for(int j=0;j<n-i-1;j++)
+                min=i;
+            for(int j=i+1;j<n;j++)
             {
-                if(arr[j]>arr[j+1])
+                if(arr[j]<arr[min])
                 {
                     temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
+                    arr[j]=arr[min];
+                    arr[min]=temp;
                 }
             }
         }
-          System.out.println("Sorted Array Using Bubble Sort Technique");
+          System.out.println("Sorted Array Using Selection Sort Technique");
           for(int i=0;i<n;i++)
           {
             System.out.println(arr[i]);
