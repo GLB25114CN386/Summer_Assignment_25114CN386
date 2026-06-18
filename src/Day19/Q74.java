@@ -1,6 +1,6 @@
 package Day19;
 import java.util.*;
-public class Q73 {
+public class Q74 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -33,10 +33,10 @@ public class Q73 {
         {
             for(int j=0;j<n;j++)
             {
-                c[i][j]=a[i][j]+b[i][j];
+                c[i][j]=a[i][j]-b[i][j];
             }
         }
-        System.out.println("Matrix After Addition");
+        System.out.println("Matrix After Subtraction");
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
