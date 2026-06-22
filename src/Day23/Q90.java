@@ -1,6 +1,6 @@
 package Day23;
 import java.util.*;
-public class Q89 {
+public class Q90 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -18,9 +18,9 @@ public class Q89 {
                     count++;
                 }
             }
-            if(count==1)
+            if(count>1)
             {
-                System.out.println("The first non repeating character\n"+s.charAt(i));
+                System.out.println("The first repeating character\n"+s.charAt(i));
                 break;
             }
         }

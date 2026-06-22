@@ -1,13 +1,15 @@
 package Day23;
 import java.util.*;
-public class Q89 {
+public class Q92 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         String s;
         System.out.println("Enter a String");
         s=sc.nextLine();
+        char ch='\u0000';
         int count;
+        int max=0;
         for(int i=0;i<s.length();i++)
         {
             count=0;
@@ -18,11 +20,12 @@ public class Q89 {
                     count++;
                 }
             }
-            if(count==1)
+            if(max<count)
             {
-                System.out.println("The first non repeating character\n"+s.charAt(i));
-                break;
+                max=count;
+                ch=s.charAt(i);
             }
         }
+        System.out.println("The character with max occurences is\n"+ch);
     }
 }
